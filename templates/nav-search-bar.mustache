@@ -1,0 +1,33 @@
+{{!
+    @template block_myoverview_withsearch/nav-search
+
+    This template renders search bar.
+}}
+{{^displaysearchbar}}
+<div class="mb-1 mr-1 d-flex align-items-center">
+    <div class="simplesearchform d-flex justify-content-center">
+        <div class="mform form-inline simplesearchform">
+            <div style="display: flex;">
+                <div class="input-group searchbar">
+                    <label for="myoverview_withsearch-searchbar">
+                    <span class="sr-only">
+                        {{#str}} search, block_myoverview_withsearch {{/str}}
+                    </span>
+                    </label>
+                    <input type="text" id="myoverview_withsearch-searchbar" class="form-control" placeholder="Search" aria-label="Search"
+                           data-region="input" autocomplete="off" style="border-color: #6a737b;">
+                    <button class="btn btn-clear" id="clearsearch" type="button" style="visibility: hidden;">
+                        <i class="icon fa fa-times fa-fw " aria-hidden="true"></i>
+                        <span class="sr-only">{{#str}} clearsearchinput, block_myoverview_withsearch {{/str}}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/displaysearchbar}}
+{{^displaysearchbar}}
+<div class="mb-1 mr-auto">
+    <span class="filler">&nbsp;</span>
+</div>
+{{/displaysearchbar}}
